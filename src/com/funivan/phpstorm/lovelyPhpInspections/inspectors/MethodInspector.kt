@@ -8,7 +8,7 @@ class MethodInspector : InspectorInterface<Method> {
         return (
                 method.parameters.size < 3
                         && !method.isStatic
-                        && method.textLength < 400 && method.textLength < 100
+                        && method.textLength < 800 && method.textLength < 300
                         && !method.modifier.isProtected
                         && method.parameters.none { it.isPassByRef }
                 ); }
