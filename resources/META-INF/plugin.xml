@@ -1,0 +1,41 @@
+<idea-plugin>
+    <id>com.funivan.phpstorm.lovelyPhpInspections</id>
+    <name>Lovely Inspections</name>
+    <version>1.0</version>
+    <vendor email="alotofall@gmail.com" url="http://funivan">funivan</vendor>
+
+    <description><![CDATA[
+      We do not say that you code is bad. We focus on good parts.
+    ]]></description>
+
+    <change-notes><![CDATA[
+
+    ]]>
+    </change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="145.0"/>
+
+    <depends>com.jetbrains.php</depends>
+    <depends>com.intellij.modules.platform</depends>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+        <codeInsight.lineMarkerProvider
+                language="PHP"
+                implementationClass="com.funivan.phpstorm.lovelyPhpInspections.idea.markers.AwesomeClassMarker" />
+
+        <codeInsight.lineMarkerProvider
+                language="PHP"
+                implementationClass="com.funivan.phpstorm.lovelyPhpInspections.idea.markers.AwesomeMethodMarker" />
+
+
+    </extensions>
+
+</idea-plugin>
