@@ -16,8 +16,8 @@ class LineMarker<T : PsiElement>(
         psi,
         psi.textRange,
         icons.next(),
-        100,
+        10,
         Function { awesome.toString() },
         null,
-        GutterIconRenderer.Alignment.LEFT
+        GutterIconRenderer.Alignment.RIGHT
 )

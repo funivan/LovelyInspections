@@ -19,7 +19,7 @@ class AwesomeClassMarker : BaseMarker(
         )
 ) {
 
-    private val inspector = RandomSkippedInspector<PhpClass>(0.70, ClassInspector())
+    private val inspector = RandomSkippedInspector<PhpClass>(0.80, ClassInspector())
 
     override fun getLineMarkerInfo(element: PsiElement): LineMarkerInfo<*>? {
         var result: LineMarkerInfo<PsiElement>? = null
