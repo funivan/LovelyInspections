@@ -26,6 +26,7 @@
     -->
 
     <extensions defaultExtensionNs="com.intellij">
+        <severitiesProvider implementation="com.funivan.phpstorm.lovelyPhpInspections.AwesomeSeverityProvider" />
         <!-- Add your extensions here -->
         <codeInsight.lineMarkerProvider
                 language="PHP"
@@ -35,7 +36,15 @@
                 language="PHP"
                 implementationClass="com.funivan.phpstorm.lovelyPhpInspections.idea.markers.AwesomeMethodMarker" />
 
-
+        <localInspection
+                language="PHP"
+                groupPath="Php,Lovely inspections"
+                implementationClass="com.funivan.phpstorm.lovelyPhpInspections.inspections.AwesomeClassInspection"
+                shortName="AwesomeClassInspection"
+                displayName="Awesome class"
+                enabledByDefault="true"
+                level="AWESOME"
+        />
     </extensions>
 
 </idea-plugin>
